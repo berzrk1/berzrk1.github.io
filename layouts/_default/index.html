@@ -20,15 +20,20 @@
         {{ range . }}
           {{ $post := . }}
           <li class="recent__item">
-            {{ with .Section }}
-              <span class="recent__section">[{{ . }}]</span>
-            {{ end }}
-            <a class="recent__link" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-            <span class="recent__dots" aria-hidden="true"></span>
-            {{ with .Date }}
-              <time class="recent__date" datetime="{{ .Format "2006-01-02" }}">
-                {{- partial "post-date" $post -}}
-              </time>
+            <div class="recent__head">
+              {{ with .Section }}
+                <span class="recent__section">[{{ . }}]</span>
+              {{ end }}
+              <a class="recent__link" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+              <span class="recent__dots" aria-hidden="true"></span>
+              {{ with .Date }}
+                <time class="recent__date" datetime="{{ .Format "2006-01-02" }}">
+                  {{- partial "post-date" $post -}}
+                </time>
+              {{ end }}
+            </div>
+            {{ with .Description }}
+              <p class="recent__desc">{{ . }}</p>
             {{ end }}
           </li>
         {{ end }}

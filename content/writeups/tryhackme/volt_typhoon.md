@@ -2,7 +2,7 @@
 title = "Volt Typhoon (Blue)"
 date = "2026-08-17"
 author = "berzrk"
-description = "CTF where you have to investigate an instrusion by the APT Volt Typhoon"
+description = "Investigate an instrusion by the APT Volt Typhoon"
 +++
 
 # Initial Access

@@ -21,14 +21,17 @@
 }
 
 .recent__item {
-  display: flex;
-  align-items: baseline;
   padding: 8px 0;
   line-height: var(--line-height);
 }
 
 .recent__item::before {
   content: none;
+}
+
+.recent__head {
+  display: flex;
+  align-items: baseline;
 }
 
 .recent__section {
@@ -63,9 +66,22 @@
   white-space: nowrap;
 }
 
+/* Second line: a quiet, indented blurb clamped to two lines. */
+.recent__desc {
+  margin: 2px 0 0;
+  padding-left: 18px;
+  font-size: 0.9em;
+  color: color-mix(in srgb, var(--foreground) 60%, transparent);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
 /* On narrow screens the leader dots have no room: stack instead. */
 @media (max-width: 684px) {
-  .recent__item {
+  .recent__head {
     flex-wrap: wrap;
   }
 
