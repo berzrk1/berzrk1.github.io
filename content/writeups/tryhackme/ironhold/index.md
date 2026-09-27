@@ -14,7 +14,7 @@ We start by getting credentials to login from a **misconfigured public
 endpoint**. With this credential, we can abuse an Union-based SQL
 Injection to read a database that is inaccessible from anywhere else.
 
-We can then escalate our account to **warden** (highest privilege) by abusing an
+We can then **escalate** our account to warden (highest privilege) by abusing an
 **Insecure Design** in the update profile endpoint.
 
 Finally, with the highest privilege, we can make use of a **deserialization attack**

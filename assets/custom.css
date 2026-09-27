@@ -1,0 +1,13 @@
+/* Site-wide overrides on top of the terminal theme. */
+
+:root {
+  --strong: #bd93f9;
+}
+
+/* Bold in prose reads as emphasis; headings and links keep --accent. */
+.post-content strong,
+.post-content b,
+.index-content strong,
+.index-content b {
+  color: var(--strong);
+}

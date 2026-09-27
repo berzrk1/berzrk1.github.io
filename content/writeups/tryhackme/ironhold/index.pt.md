@@ -16,7 +16,7 @@ configurado**. Com essas credenciais, podemos abusar de um UNION-Based
 SQL Injection para ler um banco de dados que é inacessível de qualquer
 outro lugar.
 
-Em seguida, podemos obter privilege escalation para **warden** (privilégio mais alto)
+Em seguida, podemos obter **privilege escalation** para warden (privilégio mais alto)
 abusando de um **Insecure Design** no endpoint de update de perfil.
 
 Por fim, com o privilégio mais alto, podemos usar um **ataque de

@@ -1,5 +1,7 @@
 {{/* Loaded after the theme's css/*.css bundle, so these rules win on ties. */}}
-{{ with resources.Get "recent.css" }}
-  {{ $style := . | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ range slice "custom.css" "recent.css" }}
+  {{ with resources.Get . }}
+    {{ $style := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{ end }}
 {{ end }}
